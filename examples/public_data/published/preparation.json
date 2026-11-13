@@ -1,0 +1,45 @@
+{
+  "source": {
+    "dataset": "kevinarvai/clinvar-conflicting",
+    "version": 2,
+    "url": "https://www.kaggle.com/datasets/kevinarvai/clinvar-conflicting",
+    "download_url": "https://www.kaggle.com/api/v1/datasets/download/kevinarvai/clinvar-conflicting?datasetVersionNumber=2",
+    "csv_sha256": "53061e207d437af397028760be5bc566d216f6932e21db5a10322b843c41689a",
+    "license": "CC0: Public Domain",
+    "upstream_snapshot": "ClinVar GRCh37 VCF downloaded by dataset author on 2018-04-07"
+  },
+  "raw_csv_sha256": "53061e207d437af397028760be5bc566d216f6932e21db5a10322b843c41689a",
+  "inclusion_audit": {
+    "raw_variants": 65188,
+    "excluded_missing_or_invalid_gene": 16,
+    "eligible_variants": 65172,
+    "genes": 2328,
+    "outcome_counts": {
+      "recorded_agreement": 48749,
+      "recorded_disagreement": 16423
+    },
+    "missing_frequencies": {
+      "AF_ESP": 0,
+      "AF_EXAC": 0,
+      "AF_TGP": 0
+    }
+  },
+  "feature_mapping": {
+    "AF_ESP": "log1p(1000000 * AF_ESP)",
+    "AF_EXAC": "log1p(1000000 * AF_EXAC)",
+    "AF_TGP": "log1p(1000000 * AF_TGP)"
+  },
+  "sample_id": "GRCh37 CHROM:POS:REF:ALT from the source snapshot; not a new ClinVar accession",
+  "group_mapping": "strip and uppercase SYMBOL; retain a single symbol matching [A-Z0-9_.-]+; no gene remapping or gene-as-feature",
+  "outcome": "Source CLASS=1 is recorded classification disagreement; CLASS=0 is recorded agreement among eligible multiple-submission variants",
+  "excluded_predictors": "All clinical assertions, review metadata, coordinates, IDs, gene, consequence and other annotations",
+  "preprocessing": "Only an element-wise log1p frequency transform here; training-fold median imputation, constant filtering and scaling in installed OmicsFold CLI",
+  "prepared_sha256": {
+    "features.tsv": "84dc907e463920cdef67bf1ffcd0ffa4ed8da35dad7532cc5e69d566f32f3566",
+    "metadata.tsv": "db82b036ec9d14ae7cbaa750cab8a32ca770f33178691d44f63b8d3dd1ed76c3"
+  },
+  "software": {
+    "numpy": "2.4.4",
+    "pandas": "2.3.3"
+  }
+}

@@ -1,0 +1,5 @@
+sample,outcome,patient,cohort
+004,control,P4,synthetic
+002,control,P2,synthetic
+001,case,P1,synthetic
+003,case,P3,synthetic

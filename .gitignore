@@ -1,0 +1,55 @@
+__pycache__/
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+.venv/
+*.Rcheck/
+omicsfold_*.tar.gz
+*.whl
+*.tar.gz
+*.zip
+.release-check/
+examples/results/
+
+# Python tooling
+*.py[cod]
+.coverage
+.coverage.*
+htmlcov/
+.ruff_cache/
+.mypy_cache/
+
+# Local secrets
+.env
+.env.*
+!.env.example
+
+# R session files
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Local development notes and work logs (keep methods documentation public)
+docs/*-checks.md
+.local/
+.scratch/
+
+# Local environments, editors, and generated analysis outputs
+venv/
+env/
+.ipynb_checkpoints/
+.vscode/
+.idea/
+first-run/
+benchmark-results/
+python-results/
+.Renviron
+.Renviron.*
+*.Rout
+*.log

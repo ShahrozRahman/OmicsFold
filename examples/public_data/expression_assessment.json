@@ -1,0 +1,116 @@
+{
+  "status": "pending",
+  "cross_cohort_evaluation_performed": false,
+  "common_phenotype": "lung adenocarcinoma tissue versus non-tumor/adjacent lung tissue, not healthy-person diagnosis",
+  "cohorts": [
+    {
+      "accession": "GSE10072",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE10nnn/GSE10072/matrix/GSE10072_series_matrix.txt.gz",
+      "sha256": "68fc224d6c23b1802ddc2223a0433c8cf25f11cdb9606e33736f4a0c098496af",
+      "platforms": [
+        "GPL96"
+      ],
+      "samples_total": 107,
+      "included_samples": 107,
+      "included_outcomes": {
+        "tumor": 58,
+        "non_tumor": 49
+      },
+      "included_patient_groups": 74,
+      "excluded_samples": [],
+      "processing_descriptions": [
+        "Gene expression data were processed and normalized using Bioconductor Affy package, based on the Robust Multichip Average (RMA) method5 for single-channel Affymetrix chips"
+      ],
+      "unique_probe_ids": 22283,
+      "duplicate_probe_ids": 0
+    },
+    {
+      "accession": "GSE7670",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE7nnn/GSE7670/matrix/GSE7670_series_matrix.txt.gz",
+      "sha256": "f321f33535c8b929f08499e12e3c2a950030b84bfeb47de8ba8bbd32b934dad7",
+      "platforms": [
+        "GPL96"
+      ],
+      "samples_total": 66,
+      "included_samples": 52,
+      "included_outcomes": {
+        "tumor": 26,
+        "non_tumor": 26
+      },
+      "included_patient_groups": 26,
+      "excluded_samples": [
+        {
+          "sample_id": "GSM185839",
+          "title": "19N: Adjacent normal part of large cell lung cancer"
+        },
+        {
+          "sample_id": "GSM185840",
+          "title": "19T: Tumor part of lage cell lung cancer"
+        },
+        {
+          "sample_id": "GSM185865",
+          "title": "Adj. N. mixture: Adjacent normal part of adenocarcinoma"
+        },
+        {
+          "sample_id": "GSM185866",
+          "title": "T. mixture: Tumor part of adenocarcinoma"
+        },
+        {
+          "sample_id": "GSM185867",
+          "title": "N. (Stratagene): Normal lung tissues (Cat. 735020)"
+        },
+        {
+          "sample_id": "GSM185868",
+          "title": "N. (Clontech): Normal lung tissues (Cat. 636524)"
+        },
+        {
+          "sample_id": "GSM185869",
+          "title": "A549: Carcinomatoma (ATCC No.: CCL-185\u2122)"
+        },
+        {
+          "sample_id": "GSM185870",
+          "title": "H661: Large cell lung cancer (ATCC No.: HTB-183\u2122)"
+        },
+        {
+          "sample_id": "GSM185871",
+          "title": "H1299: Non-small cell lung cancer (ATCC No.: CRL-5803\u2122)"
+        },
+        {
+          "sample_id": "GSM185872",
+          "title": "NL-20: Immortalized, nontumorigenic human bronchial epithelial cell line (ATCC No.: CRL-2503\u2122 )"
+        },
+        {
+          "sample_id": "GSM185873",
+          "title": "CL1-0: Adenocarcinoma"
+        },
+        {
+          "sample_id": "GSM185874",
+          "title": "CL1-1: Adenocarcinoma"
+        },
+        {
+          "sample_id": "GSM185875",
+          "title": "CL1-5: Adenocarcinoma"
+        },
+        {
+          "sample_id": "GSM185876",
+          "title": "CL1-5-F4: Adenocarcinoma"
+        }
+      ],
+      "processing_descriptions": [
+        "The data were analyzed with Microarray Suite version 5.0 (MAS 5.0) using Affymetrix default analysis settings and global scaling as normalization method. The trimmed mean target intensity of each array was arbitrarily set to 500."
+      ],
+      "unique_probe_ids": 22283,
+      "duplicate_probe_ids": 0
+    }
+  ],
+  "common_non_control_probes": 22215,
+  "feature_mapping": "Exact GPL96 probe-set ID intersection, excluding AFFX- controls; no gene symbol collapse or outcome-based feature selection",
+  "checks": {
+    "same_platform": true,
+    "binary_metadata": true,
+    "unique_common_features": true,
+    "verified_common_preprocessing": false
+  },
+  "reason": "GSE10072 released data use RMA and averaged technical replicates; GSE7670 released data use MAS5 with per-array target 500. A common raw-CEL or validated training-reference preprocessing workflow has not been established. Do not merge, re-quantile-normalize jointly or report cross-cohort performance from these mismatched releases.",
+  "next_step": "Reprocess both raw CEL cohorts with a documented compatible workflow that fits any cross-sample parameters on training data only; verify patient independence and probe annotation before releasing cross-cohort results."
+}

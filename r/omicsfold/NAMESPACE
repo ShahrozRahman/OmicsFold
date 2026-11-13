@@ -1,0 +1,2 @@
+export(omicsfold_analyze)
+export(omicsfold_benchmark)

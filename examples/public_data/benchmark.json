@@ -1,0 +1,28 @@
+{
+  "case_study": "clinvar_recorded_disagreement",
+  "source": {
+    "dataset": "kevinarvai/clinvar-conflicting",
+    "version": 2,
+    "url": "https://www.kaggle.com/datasets/kevinarvai/clinvar-conflicting",
+    "download_url": "https://www.kaggle.com/api/v1/datasets/download/kevinarvai/clinvar-conflicting?datasetVersionNumber=2",
+    "csv_sha256": "53061e207d437af397028760be5bc566d216f6932e21db5a10322b843c41689a",
+    "license": "CC0: Public Domain",
+    "upstream_snapshot": "ClinVar GRCh37 VCF downloaded by dataset author on 2018-04-07"
+  },
+  "features": ["AF_ESP", "AF_EXAC", "AF_TGP"],
+  "feature_transform": "log1p(1000000 * allele_frequency), independently per value",
+  "benchmark": {
+    "orientation": "samples-by-features",
+    "sample_id_column": "sample_id",
+    "outcome_column": "outcome",
+    "positive_label": "recorded_disagreement",
+    "input_type": "numeric",
+    "group_column": "gene",
+    "split": "grouped",
+    "folds": 5,
+    "seed": 42,
+    "weighting": "sample",
+    "bootstrap_repeats": 0,
+    "dataset_label": "Historical ClinVar: recorded classification disagreement (numeric variants, gene-grouped)"
+  }
+}

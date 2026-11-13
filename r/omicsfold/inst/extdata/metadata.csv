@@ -1,0 +1,9 @@
+sample_id,outcome,patient,cohort
+008,control,P8,external
+007,case,P7,external
+006,control,P6,external
+005,case,P5,external
+004,control,P4,development
+003,case,P3,development
+002,control,P2,development
+001,case,P1,development

@@ -1,0 +1,16 @@
+fold	model	feature	retained	reason	coefficient	absolute_coefficient_rank	interpretation
+0	logistic_l2	AF_ESP	True	retained	-0.18307913963599595	3	exploratory model output
+0	logistic_l2	AF_EXAC	True	retained	0.49756536053400807	1	exploratory model output
+0	logistic_l2	AF_TGP	True	retained	-0.2790991164501956	2	exploratory model output
+1	logistic_l2	AF_ESP	True	retained	-0.17981118983010055	3	exploratory model output
+1	logistic_l2	AF_EXAC	True	retained	0.5199013027491213	1	exploratory model output
+1	logistic_l2	AF_TGP	True	retained	-0.29176651467866627	2	exploratory model output
+2	logistic_l2	AF_ESP	True	retained	-0.19307466492405823	3	exploratory model output
+2	logistic_l2	AF_EXAC	True	retained	0.4931344541655535	1	exploratory model output
+2	logistic_l2	AF_TGP	True	retained	-0.2571090746061854	2	exploratory model output
+3	logistic_l2	AF_ESP	True	retained	-0.15744698536898466	3	exploratory model output
+3	logistic_l2	AF_EXAC	True	retained	0.4741040410730387	1	exploratory model output
+3	logistic_l2	AF_TGP	True	retained	-0.26912048584700415	2	exploratory model output
+4	logistic_l2	AF_ESP	True	retained	-0.18019552157511012	3	exploratory model output
+4	logistic_l2	AF_EXAC	True	retained	0.5167114127054535	1	exploratory model output
+4	logistic_l2	AF_TGP	True	retained	-0.28260482086692995	2	exploratory model output

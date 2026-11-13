@@ -1,0 +1,17 @@
+Package: omicsfold
+Type: Package
+Title: Reproducible Binary Classification for Omics Research
+Version: 0.1.0
+Authors@R: person("Shahroz", "Rahman", role = c("aut", "cre"), email = "shahrozrahman.me@gmail.com")
+Description: Provides fold-local preprocessing and group-aware binary
+    classification through the 'OmicsFold' Python engine. Supports numeric,
+    expression and count matrices, held-out predictions, reproducible split
+    assignments and HTML reports. Requires Python with the 'omicsfold'
+    package installed; source and installation instructions are available at
+    <https://github.com/ShahrozRahman/OmicsFold>.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Imports: jsonlite, processx
+SystemRequirements: Python (>= 3.10), omicsfold Python package (>= 0.1.0, < 0.2)
+URL: https://github.com/ShahrozRahman/OmicsFold
+BugReports: https://github.com/ShahrozRahman/OmicsFold/issues

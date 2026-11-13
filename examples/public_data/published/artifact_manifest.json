@@ -1,0 +1,19 @@
+{
+  "full_cli_output_sha256": {
+    "features.tsv": "fbdce49aa8415c4828b3ea5f35d5de49621834605c13b596d57cf36946283200",
+    "metrics.tsv": "753cdeddfe6e8301ff1dc33ea4e558d21d1c838b1330344b5a7c44bd5f9bac79",
+    "predictions.tsv": "44585944121295ca758d4fe1e98868d72b61b83d3fd528e595df7482be4587c8",
+    "report.html": "761426cd6935c68984a05f869d40bb96f53aa56ec1c2f70bfc3cd7212a8ba21f",
+    "run.json": "14dc040fcaff7eea9fdbf312d6c329d3d061281d823b65f70b836068c9f42d34",
+    "splits.tsv": "572acb1929413206f5bdb300c7abb2c0cacc01282ff1047af12f8559e89a07c7"
+  },
+  "published_sha256": {
+    "features.tsv": "fbdce49aa8415c4828b3ea5f35d5de49621834605c13b596d57cf36946283200",
+    "metrics.tsv": "753cdeddfe6e8301ff1dc33ea4e558d21d1c838b1330344b5a7c44bd5f9bac79",
+    "preparation.json": "9710d64d53e3971d02be0be3d88e77d720c499385229d3f8adf7b7ef4a71a498",
+    "report.html": "84e40289c1a97770ea11e26233cfcb46c7571cfc86bcef2e1cd8b3e6d197ab5b",
+    "run_summary.json": "2e30ee3957d21bb07e301ecf388edd064eaec26fdf489d630df7e043f3fd4357",
+    "split_audit.json": "5977d356728afb60930f15f20274eba1e45ce53d41d6544ac0b3564bcdf39e26"
+  },
+  "note": "Published HTML adds source/interpretation context; full CLI output checksums refer to the original artifacts"
+}

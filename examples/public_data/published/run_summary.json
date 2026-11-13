@@ -1,0 +1,178 @@
+{
+  "report_schema_version": "1.0",
+  "configuration": {
+    "loading": {
+      "orientation": "samples-by-features",
+      "sample_id_column": "sample_id",
+      "outcome_column": "outcome",
+      "feature_id_column": "feature_id",
+      "positive_label": "recorded_disagreement",
+      "input_type": "numeric",
+      "group_column": "gene",
+      "cohort_column": null
+    },
+    "split": "grouped",
+    "n_splits_requested": 5,
+    "n_splits_actual": 5,
+    "holdout_cohort": null,
+    "seed": 42,
+    "dataset_label": "Historical ClinVar: recorded classification disagreement (numeric variants, gene-grouped)",
+    "positive_label": "recorded_disagreement",
+    "input_type": "numeric",
+    "group_column": "gene",
+    "cohort_column": null,
+    "logistic_regression": {
+      "penalty": "l2",
+      "C": 1.0,
+      "solver": "liblinear",
+      "tol": 0.0001,
+      "max_iter": 2000,
+      "class_weight": null,
+      "fit_intercept": true
+    },
+    "count_preprocessing": "sample-wise CPM (1e6), log1p; training CPM>=1 in >=ceil(10% of training samples); remove training constants; training standard scaling",
+    "numerical_preprocessing": "drop training-all-missing features; training median imputation; remove training constants; training standard scaling"
+  },
+  "input_checksums": {
+    "source_files": {
+      "features": {
+        "path": "prepared\\features.tsv",
+        "sha256": "84dc907e463920cdef67bf1ffcd0ffa4ed8da35dad7532cc5e69d566f32f3566",
+        "size_bytes": 3270269
+      },
+      "metadata": {
+        "path": "prepared\\metadata.tsv",
+        "sha256": "db82b036ec9d14ae7cbaa750cab8a32ca770f33178691d44f63b8d3dd1ed76c3",
+        "size_bytes": 2760317
+      }
+    },
+    "canonical_features_sha256": "cc2833007bea007019dab7112cff0e84e68c98659ea344249a199c7e884e3028",
+    "canonical_metadata_sha256": "ca43d94101a272740b343b15711b8ac4c89c3611cea74e9b9eeb2fc8c9a50204"
+  },
+  "package_versions": {
+    "omicsfold": "0.1.0",
+    "python": "3.14.4",
+    "numpy": "2.4.4",
+    "pandas": "2.3.3",
+    "scipy": "1.17.1",
+    "scikit-learn": "1.8.0"
+  },
+  "class_balance": {
+    "recorded_agreement": 48749,
+    "recorded_disagreement": 16423
+  },
+  "metric_summary": {
+    "mean": "unweighted arithmetic mean across folds",
+    "rows": [
+      {
+        "scope": "fold",
+        "fold": 0,
+        "model": "prevalence",
+        "average_precision": 0.2519564216664109,
+        "roc_auc": 0.5,
+        "test_positive_prevalence": 0.2519564216664109,
+        "test_sample_count": 13034.0
+      },
+      {
+        "scope": "fold",
+        "fold": 0,
+        "model": "logistic_l2",
+        "average_precision": 0.29993172998906137,
+        "roc_auc": 0.569515381492239,
+        "test_positive_prevalence": 0.2519564216664109,
+        "test_sample_count": 13034.0
+      },
+      {
+        "scope": "fold",
+        "fold": 1,
+        "model": "prevalence",
+        "average_precision": 0.25207118748082236,
+        "roc_auc": 0.5,
+        "test_positive_prevalence": 0.25207118748082236,
+        "test_sample_count": 13036.0
+      },
+      {
+        "scope": "fold",
+        "fold": 1,
+        "model": "logistic_l2",
+        "average_precision": 0.29042651510220946,
+        "roc_auc": 0.5674369274466657,
+        "test_positive_prevalence": 0.25207118748082236,
+        "test_sample_count": 13036.0
+      },
+      {
+        "scope": "fold",
+        "fold": 2,
+        "model": "prevalence",
+        "average_precision": 0.2519564216664109,
+        "roc_auc": 0.5,
+        "test_positive_prevalence": 0.2519564216664109,
+        "test_sample_count": 13034.0
+      },
+      {
+        "scope": "fold",
+        "fold": 2,
+        "model": "logistic_l2",
+        "average_precision": 0.30420893354525436,
+        "roc_auc": 0.5800727068303194,
+        "test_positive_prevalence": 0.2519564216664109,
+        "test_sample_count": 13034.0
+      },
+      {
+        "scope": "fold",
+        "fold": 3,
+        "model": "prevalence",
+        "average_precision": 0.2520138089758343,
+        "roc_auc": 0.5,
+        "test_positive_prevalence": 0.2520138089758343,
+        "test_sample_count": 13035.0
+      },
+      {
+        "scope": "fold",
+        "fold": 3,
+        "model": "logistic_l2",
+        "average_precision": 0.3094849863691423,
+        "roc_auc": 0.584670616243219,
+        "test_positive_prevalence": 0.2520138089758343,
+        "test_sample_count": 13035.0
+      },
+      {
+        "scope": "fold",
+        "fold": 4,
+        "model": "prevalence",
+        "average_precision": 0.25197575385559734,
+        "roc_auc": 0.5,
+        "test_positive_prevalence": 0.25197575385559734,
+        "test_sample_count": 13033.0
+      },
+      {
+        "scope": "fold",
+        "fold": 4,
+        "model": "logistic_l2",
+        "average_precision": 0.2930120627063249,
+        "roc_auc": 0.5690588803323967,
+        "test_positive_prevalence": 0.25197575385559734,
+        "test_sample_count": 13033.0
+      },
+      {
+        "scope": "mean",
+        "fold": "",
+        "model": "logistic_l2",
+        "average_precision": 0.29941284554239844,
+        "roc_auc": 0.574150902468968,
+        "test_positive_prevalence": 0.25199471872901513,
+        "test_sample_count": 13034.4
+      },
+      {
+        "scope": "mean",
+        "fold": "",
+        "model": "prevalence",
+        "average_precision": 0.25199471872901513,
+        "roc_auc": 0.5,
+        "test_positive_prevalence": 0.25199471872901513,
+        "test_sample_count": 13034.4
+      }
+    ]
+  },
+  "publication_note": "Compact summary; full run.json and variant-level outputs are reproduced outside Git"
+}
