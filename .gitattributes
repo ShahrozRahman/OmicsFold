@@ -4,5 +4,6 @@
 *.Rd text eol=lf
 *.md text eol=lf
 *.yml text eol=lf
+*.toml text eol=lf
 *.tsv text eol=lf
 *.csv text eol=lf
