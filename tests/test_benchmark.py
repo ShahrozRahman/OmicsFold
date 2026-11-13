@@ -12,7 +12,9 @@ import pandas as pd
 from sklearn.metrics import average_precision_score, roc_auc_score
 
 from omicsfold import benchmark, load_data
-from omicsfold.benchmark import _FoldPreprocessor, _normalize_counts, _validate_split
+from omicsfold.benchmark import (
+    LogisticRegression, StratifiedKFold, _FoldPreprocessor, _normalize_counts, _validate_split,
+)
 from omicsfold.io import LoadedData
 
 
@@ -92,8 +94,10 @@ class BenchmarkTests(unittest.TestCase):
 
     def test_overlap_rejected_before_fitting(self):
         data = synthetic()
-        with patch("omicsfold.benchmark.StratifiedKFold.split", return_value=[
-                (np.array([0, 1, 2]), np.array([2, 3]))]), patch("omicsfold.benchmark.LogisticRegression.fit") as fit:
+        # Patch the objects directly: Python 3.10 resolves the dotted module
+        # name through the public omicsfold.benchmark function instead.
+        with patch.object(StratifiedKFold, "split", return_value=[
+                (np.array([0, 1, 2]), np.array([2, 3]))]), patch.object(LogisticRegression, "fit") as fit:
             with self.assertRaisesRegex(ValueError, "sample IDs overlap.*002"):
                 benchmark(data, n_splits=2)
             fit.assert_not_called()
