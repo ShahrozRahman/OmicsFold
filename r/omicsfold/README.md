@@ -4,17 +4,17 @@ This package calls the installed Python engine. It does not duplicate splitting,
 preprocessing, fitting, metrics or HTML rendering in R. R dependencies are
 `jsonlite` and `processx`; Python requires the installed `omicsfold` package.
 
-From the repository root, install the Python engine into your chosen Python environment:
+Install the Python engine from PyPI into your chosen Python environment:
 
 ```sh
-python -m pip install .
+python -m pip install omicsfold
 ```
 
 Set `OMICSFOLD_PYTHON` to that environment's Python executable before starting
 R, or pass its path as `executable`. The package does not install Python or
 Python dependencies automatically.
 
-To build the R package from the repository root:
+The R package has been submitted to CRAN and is awaiting review. Until publication, build it from the repository root:
 
 ```sh
 R CMD build r/omicsfold
